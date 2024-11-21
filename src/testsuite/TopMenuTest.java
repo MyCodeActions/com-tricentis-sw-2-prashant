@@ -46,8 +46,8 @@ public class TopMenuTest extends BaseTest {
 
     @Test
     public void userShouldNavigateToComputerPageSuccessfully() {
-        driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[2]/a")).click();
-        String actualText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[1]/h1")).getText();
+        driver.findElement(By.xpath("//ul[@class='top-menu']//li[2]/a")).click();
+        String actualText = driver.findElement(By.xpath("//h1")).getText();
         String expectedText = "Computers";
         Assert.assertEquals(actualText, expectedText);
     }
@@ -55,8 +55,8 @@ public class TopMenuTest extends BaseTest {
 
     @Test
     public void userShouldNavigateToElectronicsPageSuccessfully() {
-        driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[3]/a")).click();
-        String actualText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[1]/h1")).getText();
+        driver.findElement(By.xpath("//a[@href='/electronics']")).click();
+        String actualText = driver.findElement(By.xpath("//h1")).getText();
         String expectedText = "Electronics";
         Assert.assertEquals(actualText, expectedText);
     }
@@ -65,8 +65,8 @@ public class TopMenuTest extends BaseTest {
     @Test
     public void userShouldNavigateToApparelAndShoesPageSuccessfully() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[4]/a")).click();
-        String actualText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[1]/h1")).getText();
+        driver.findElement(By.xpath("//div[4]/div[1]/div[2]/ul[1]/li[4]/a")).click();
+        String actualText = driver.findElement(By.xpath("//h1")).getText();
         String expectedText = "Apparel & Shoes";
         Assert.assertEquals(actualText, expectedText);
     }
@@ -74,8 +74,8 @@ public class TopMenuTest extends BaseTest {
     @Test
     public void userShouldNavigateToDigitalDownloadsPageSuccessfully() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[5]/a")).click();
-        String actualText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[1]/h1")).getText();
+        driver.findElement(By.xpath("//div[4]/div[1]/div[2]/ul[1]/li[5]/a")).click();
+        String actualText = driver.findElement(By.xpath("//h1")).getText();
         String expectedText = "Digital downloads";
         Assert.assertEquals(actualText, expectedText);
     }
@@ -84,8 +84,8 @@ public class TopMenuTest extends BaseTest {
     @Test
     public void userShouldNavigateToBooksPageSuccessfully() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[1]/a")).click();
-        String actualText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[1]/h1")).getText();
+        driver.findElement(By.xpath("//div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[1]/a")).click();
+        String actualText = driver.findElement(By.xpath("//h1")).getText();
         String expectedText = "Books";
         Assert.assertEquals(actualText, expectedText);
     }
@@ -94,8 +94,8 @@ public class TopMenuTest extends BaseTest {
     @Test
     public void userShouldNavigateToJewelryPageSuccessfully() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[6]/a")).click();
-        String actualText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[1]/h1")).getText();
+        driver.findElement(By.xpath("//div[4]/div[1]/div[2]/ul[1]/li[6]/a")).click();
+        String actualText = driver.findElement(By.xpath("//h1")).getText();
         String expectedText = "Jewelry";
         Assert.assertEquals(actualText, expectedText);
     }
@@ -103,8 +103,8 @@ public class TopMenuTest extends BaseTest {
     @Test
     public void userShouldNavigateToGiftCardsPageSuccessfully() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[2]/ul[1]/li[7]/a")).click();
-        String actualText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[1]/h1")).getText();
+        driver.findElement(By.xpath("//div[4]/div[1]/div[2]/ul[1]/li[7]/a")).click();
+        String actualText = driver.findElement(By.xpath("//h1")).getText();
         String expectedText = "Gift Cards";
         Assert.assertEquals(actualText, expectedText);
     }

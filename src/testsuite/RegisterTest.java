@@ -40,7 +40,7 @@ public class RegisterTest extends BaseTest {
     public void userShouldNavigateToRegisterPageSuccessfully() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.findElement(By.className("ico-register")).click();
-        String actualText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[1]/h1")).getText();
+        String actualText = driver.findElement(By.xpath("//h1")).getText();
         String expectedText = "Register";
         Assert.assertEquals(actualText, expectedText);
     }
@@ -53,7 +53,7 @@ public class RegisterTest extends BaseTest {
         driver.findElement(By.id("gender-male")).click();
         driver.findElement(By.id("FirstName")).sendKeys("Prashant");
         driver.findElement(By.id("LastName")).sendKeys("Patel");
-        driver.findElement(By.name("Email")).sendKeys("Patel@gmail.com");
+        driver.findElement(By.name("Email")).sendKeys("Patel765@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("123456");
         driver.findElement(By.id("ConfirmPassword")).sendKeys("123456");
         driver.findElement(By.name("register-button")).click();

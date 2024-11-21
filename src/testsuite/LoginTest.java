@@ -43,7 +43,7 @@ public class LoginTest extends BaseTest {
 
         driver.findElement(By.className("ico-login")).click();
         String expectedText = "Welcome, Please Sign In!";
-        WebElement welcomeText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[1]/h1"));
+        WebElement welcomeText = driver.findElement(By.xpath("//h1"));
         String actualText = welcomeText.getText();
         Assert.assertEquals(expectedText, actualText);
     }
@@ -67,7 +67,7 @@ public class LoginTest extends BaseTest {
         driver.findElement(By.name("Password")).sendKeys("123456");
         driver.findElement(By.className("login-button")).click();
         String expectedText = "Login was unsuccessful. Please correct the errors and try again.";
-        String actualText = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[1]/div/span")).getText();
+        String actualText = driver.findElement(By.xpath("//span[text()='Login was unsuccessful. Please correct the errors and try again.']")).getText();
         Assert.assertEquals(expectedText, actualText);
     }
 
